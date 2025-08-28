@@ -6,7 +6,7 @@ const services = [
   {
     title: "Home Theater Installation",
     description: "Transform your living space into an immersive cinematic paradise. We specialize in designing and installing custom home theater systems that deliver breathtaking visuals and heart-pounding audio, perfectly calibrated for your room.",
-    image: "https://picsum.photos/800/600?random=1",
+    image: "/service-home-theater.jpg",
     aiHint: "home cinema room",
     features: [
       "Custom 4K/8K Projector & Screen Setup",
@@ -19,7 +19,7 @@ const services = [
   {
     title: "Commercial AV Solutions",
     description: "Elevate your business environment with our professional audio-visual solutions. From crystal-clear conference room audio to dynamic digital signage and multi-zone sound systems for restaurants and retail, we deliver reliability and performance.",
-    image: "https://picsum.photos/800/600?random=2",
+    image: "/service-commercial-av.jpg",
     aiHint: "modern boardroom",
     features: [
       "Video Conferencing & Presentation Systems",
@@ -32,7 +32,7 @@ const services = [
   {
     title: "Acoustic Treatment",
     description: "Unlock the true potential of your space with our expert acoustic treatment services. We analyze your room's acoustics and apply tailored solutions to eliminate echo, reverb, and unwanted noise for pristine sound quality.",
-    image: "https://picsum.photos/800/600?random=3",
+    image: "/service-acoustic-treatment.jpg",
     aiHint: "acoustic panels",
     features: [
       "Professional Room Acoustic Analysis",

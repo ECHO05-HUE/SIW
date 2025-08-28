@@ -11,42 +11,42 @@ const projects = [
   {
     title: "Luxury Villa Cinema",
     category: "Home Theaters",
-    image: "https://picsum.photos/600/400?random=1",
+    image: "/portfolio-1.jpg",
     aiHint: "luxury cinema",
     description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
   },
   {
     title: "Corporate Boardroom AV",
     category: "Commercial Sound",
-    image: "https://picsum.photos/600/400?random=2",
+    image: "/portfolio-2.jpg",
     aiHint: "corporate boardroom",
     description: "Integrated video conferencing and presentation system for a Fortune 500 company."
   },
   {
     title: "Studio Acoustic Paneling",
     category: "Acoustics",
-    image: "https://picsum.photos/600/400?random=3",
+    image: "/portfolio-3.jpg",
     aiHint: "recording studio",
     description: "Custom-designed acoustic panels for a professional music recording studio."
   },
   {
     title: "Minimalist Media Room",
     category: "Home Theaters",
-    image: "https://picsum.photos/600/400?random=4",
+    image: "/portfolio-4.jpg",
     aiHint: "media room",
     description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
   },
   {
     title: "Restaurant Multi-Zone Audio",
     category: "Commercial Sound",
-    image: "https://picsum.photos/600/400?random=5",
+    image: "/portfolio-5.jpg",
     aiHint: "restaurant audio",
     description: "A seamless multi-zone audio system for an upscale dining establishment."
   },
   {
     title: "Home Recording Booth",
     category: "Acoustics",
-    image: "https://picsum.photos/600/400?random=6",
+    image: "/portfolio-6.jpg",
     aiHint: "home studio",
     description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
   },
