@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -58,16 +58,6 @@ const projects = [
 type Project = typeof projects[0];
 type Category = "All" | "Home Theaters" | "Commercial Sound" | "Acoustics";
 
-// Dummy components for framer-motion since it's not in the project
-const AnimatePresence: React.FC<{children: React.ReactNode}> = ({ children }) => <>{children}</>;
-const motion = {
-  div: React.forwardRef<HTMLDivElement, {children: React.ReactNode; className: string; initial?: any; animate?: any; exit?: any; transition?: any;}>(({children, className}, ref) => (
-    <div ref={ref} className={className}>{children}</div>
-  )),
-};
-motion.div.displayName = 'motion.div';
-
-
 export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<Category>("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -96,44 +86,35 @@ export default function PortfolioSection() {
               ))}
             </TabsList>
             
-            <AnimatePresence>
-                <motion.div
-                  key={activeTab}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-                >
-                  {filteredProjects.map((project, index) => (
-                    <FadeInOnScroll key={index} delay={index * 100}>
-                      <Card 
-                        className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30 cursor-pointer"
-                        onClick={() => setSelectedProject(project)}
-                      >
-                        <div className="relative aspect-[4/3] overflow-hidden">
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            data-ai-hint={project.aiHint}
-                            width={800}
-                            height={600}
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                          <div className="absolute bottom-0 left-0 p-4">
-                            <Badge variant="secondary">{project.category}</Badge>
-                          </div>
-                        </div>
-                        <CardContent className="p-6 flex-grow flex flex-col">
-                           <h3 className="font-headline text-xl font-bold mb-2">{project.title}</h3>
-                           <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
-                        </CardContent>
-                      </Card>
-                    </FadeInOnScroll>
-                  ))}
-                </motion.div>
-            </AnimatePresence>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project, index) => (
+                <FadeInOnScroll key={index} delay={index * 100}>
+                  <Card 
+                    className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30 cursor-pointer"
+                    onClick={() => setSelectedProject(project)}
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={`Portfolio project: ${project.title}`}
+                        data-ai-hint={project.aiHint}
+                        width={800}
+                        height={600}
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-0 left-0 p-4">
+                        <Badge variant="secondary">{project.category}</Badge>
+                      </div>
+                    </div>
+                    <CardContent className="p-6 flex-grow flex flex-col">
+                       <h3 className="font-headline text-xl font-bold mb-2">{project.title}</h3>
+                       <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
+                    </CardContent>
+                  </Card>
+                </FadeInOnScroll>
+              ))}
+            </div>
           </Tabs>
         </div>
 
@@ -143,7 +124,7 @@ export default function PortfolioSection() {
               <div className="relative aspect-video">
                  <Image
                     src={selectedProject.image}
-                    alt={selectedProject.title}
+                    alt={`Full screen view of portfolio project: ${selectedProject.title}`}
                     data-ai-hint={selectedProject.aiHint}
                     fill
                     className="object-contain"
@@ -158,6 +139,7 @@ export default function PortfolioSection() {
               size="icon"
               onClick={() => setSelectedProject(null)}
               className="absolute -top-2 -right-2 rounded-full h-8 w-8 bg-black/50 text-white hover:bg-black/75 hover:text-white z-10"
+              aria-label="Close image preview"
             >
               <X className="h-5 w-5" />
               <span className="sr-only">Close</span>

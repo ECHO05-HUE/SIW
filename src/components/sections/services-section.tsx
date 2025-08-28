@@ -62,7 +62,7 @@ export default function ServicesSection() {
                   <div className={`relative aspect-video w-full rounded-lg overflow-hidden shadow-lg ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={`Service offered: ${service.title}`}
                       data-ai-hint={service.aiHint}
                       fill
                       className="object-cover"

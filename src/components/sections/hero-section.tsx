@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-image-main.jpg"
-          alt="Modern home theater"
+          alt="Modern home theater with a large screen and comfortable seating, designed by Prime Audio Solution"
           data-ai-hint="home theater"
           fill
           className="object-cover"
