@@ -2,19 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { MoveRight } from "lucide-react";
 
 export default function HeroSection() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative h-screen min-h-[700px] flex items-center text-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="https://picsum.photos/1920/1080"
@@ -22,24 +14,26 @@ export default function HeroSection() {
           data-ai-hint="home theater"
           fill
           className="object-cover"
-          style={{ transform: `translateY(${offsetY * 0.4}px)` }}
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       </div>
 
-      <div className="relative z-10 p-4">
-        <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-lg">
-          Crafting Immersive Audio-Visual Experiences
+      <div className="container relative z-10 p-4 mt-auto mb-20 md:mb-32 text-center">
+        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
+          Immersive Audio-Visual
         </h1>
-        <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
-          From breathtaking home cinemas to crystal-clear commercial sound systems, Acoustica Vista delivers unparalleled quality and precision.
+        <p className="mt-6 text-xl md:text-2xl max-w-4xl mx-auto text-muted-foreground">
+          We deliver unparalleled quality and precision, from breathtaking home cinemas to crystal-clear commercial sound systems.
         </p>
-        <div className="mt-10 flex justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <a href="#services">Explore Our Services</a>
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Button asChild size="lg" className="text-lg py-7 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full sm:w-auto">
+            <a href="#services">
+              Explore Services
+              <MoveRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+          <Button asChild size="lg" variant="outline" className="text-lg py-7 px-8 border-2 font-semibold w-full sm:w-auto">
              <a href="#contact">Request a Quote</a>
           </Button>
         </div>

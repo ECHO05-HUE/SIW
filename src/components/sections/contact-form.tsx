@@ -34,14 +34,14 @@ export function ContactForm() {
     const result = await submitContactForm(values);
     if (result.success) {
       toast({
-        title: "Success!",
+        title: "Message Sent!",
         description: result.message,
       });
       form.reset();
     } else {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
+        title: "Submission Error",
         description: result.message || "There was a problem with your submission.",
       });
     }
@@ -55,7 +55,7 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Full Name</FormLabel>
               <FormControl>
                 <Input placeholder="Your Name" {...field} />
               </FormControl>
@@ -68,7 +68,7 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Email Address</FormLabel>
               <FormControl>
                 <Input placeholder="your.email@example.com" {...field} />
               </FormControl>
@@ -81,9 +81,9 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone (Optional)</FormLabel>
+              <FormLabel>Phone Number (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Your Phone Number" {...field} />
+                <Input placeholder="e.g. +1 234 567 8900" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,16 +94,16 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>How can we help?</FormLabel>
               <FormControl>
-                <Textarea placeholder="Tell us about your project..." className="min-h-[120px]" {...field} />
+                <Textarea placeholder="Tell us about your project requirements..." className="min-h-[150px]" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={form.formState.isSubmitting}>
-          {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
+          {form.formState.isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
         </Button>
       </form>
     </Form>

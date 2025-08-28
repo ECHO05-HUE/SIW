@@ -25,12 +25,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const NavLinks = () => (
+  const NavLinks = ({ inSheet = false }: { inSheet?: boolean }) => (
     <>
       {navLinks.map((link) => (
-        <a key={link.href} href={link.href} className="transition-colors hover:text-primary">
-          {link.label}
-        </a>
+        <Button key={link.href} variant="link" asChild className={cn(inSheet ? "text-lg" : "text-base", "text-foreground hover:text-primary")}>
+          <a href={link.href} >
+            {link.label}
+          </a>
+        </Button>
       ))}
     </>
   );
@@ -42,13 +44,16 @@ export default function Header() {
         hasScrolled ? "bg-background/80 border-b border-border/50 backdrop-blur-lg" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-3">
           <AcousticaLogo className="h-8 w-8 text-primary" />
-          <span className="font-headline text-xl font-bold">Acoustica Vista</span>
+          <span className="font-headline text-2xl font-bold">Acoustica Vista</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-2">
           <NavLinks />
+           <Button asChild className="ml-4 bg-primary hover:bg-primary/90 text-primary-foreground">
+             <a href="#contact">Get a Quote</a>
+          </Button>
         </nav>
         <div className="md:hidden">
           <Sheet>
@@ -58,9 +63,12 @@ export default function Header() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col items-center gap-6 mt-8 text-lg font-medium">
-                <NavLinks />
+            <SheetContent side="right" className="pt-20">
+              <nav className="flex flex-col items-center gap-6">
+                <NavLinks inSheet />
+                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <a href="#contact">Get a Quote</a>
+                 </Button>
               </nav>
             </SheetContent>
           </Sheet>
