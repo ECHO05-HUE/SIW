@@ -24,7 +24,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Our Location</p>
-                    <p className="text-muted-foreground">Malviya Nagar, Jaipur, Rajasthan, 302017</p>
+                    <p className="text-muted-foreground">House No. 6, Shyam Nagar, Madarpura,<br />Ajmer – 305001, Rajasthan, India</p>
                   </div>
                 </div>
                  <div className="flex items-start gap-4">
@@ -33,7 +33,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Email Address</p>
-                    <a href="mailto:contact@primeaudiosolution.com" className="text-muted-foreground hover:text-primary transition-colors">contact@primeaudiosolution.com</a>
+                    <a href="mailto:akshay.primeaudiosolution@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">akshay.primeaudiosolution@gmail.com</a>
                   </div>
                 </div>
                  <div className="flex items-start gap-4">
@@ -42,21 +42,21 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Phone Number</p>
-                    <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">+91 987 654 3210</a>
+                    <a href="tel:+919351068346" className="text-muted-foreground hover:text-primary transition-colors">+91 93510 68346</a>
                   </div>
                 </div>
                </div>
             </div>
             <div className="w-full rounded-lg overflow-hidden border-2 border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113994.0993952763!2d75.7025255433594!3d26.885141600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114534.6219468494!2d74.55734894335937!3d26.4678191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be72346c69999%3A0xa75553d10078351!2sAjmer%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000001"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '300px' }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Prime Audio Solution Location in Jaipur"
+                title="Prime Audio Solution Location in Ajmer"
               ></iframe>
             </div>
           </div>
