@@ -6,52 +6,56 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
     title: "Luxury Villa Cinema",
     category: "Home Theaters",
-    image: "/portfolio-1.jpg",
+    image: "https://picsum.photos/800/600?random=1",
     aiHint: "luxury cinema",
     description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
   },
   {
     title: "Corporate Boardroom AV",
     category: "Commercial Sound",
-    image: "/portfolio-2.jpg",
+    image: "https://picsum.photos/800/600?random=2",
     aiHint: "corporate boardroom",
     description: "Integrated video conferencing and presentation system for a Fortune 500 company."
   },
   {
     title: "Studio Acoustic Paneling",
     category: "Acoustics",
-    image: "/portfolio-3.jpg",
+    image: "https://picsum.photos/800/600?random=3",
     aiHint: "recording studio",
     description: "Custom-designed acoustic panels for a professional music recording studio."
   },
   {
     title: "Minimalist Media Room",
     category: "Home Theaters",
-    image: "/portfolio-4.jpg",
+    image: "https://picsum.photos/800/600?random=4",
     aiHint: "media room",
     description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
   },
   {
     title: "Restaurant Multi-Zone Audio",
     category: "Commercial Sound",
-    image: "/portfolio-5.jpg",
+    image: "https://picsum.photos/800/600?random=5",
     aiHint: "restaurant audio",
     description: "A seamless multi-zone audio system for an upscale dining establishment."
   },
   {
     title: "Home Recording Booth",
     category: "Acoustics",
-    image: "/portfolio-6.jpg",
+    image: "https://picsum.photos/800/600?random=6",
     aiHint: "home studio",
     description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
   },
 ];
 
+type Project = typeof projects[0];
 type Category = "All" | "Home Theaters" | "Commercial Sound" | "Acoustics";
 
 // Dummy components for framer-motion since it's not in the project
@@ -66,6 +70,7 @@ motion.div.displayName = 'motion.div';
 
 export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<Category>("All");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = activeTab === "All"
     ? projects
@@ -102,14 +107,17 @@ export default function PortfolioSection() {
                 >
                   {filteredProjects.map((project, index) => (
                     <FadeInOnScroll key={index} delay={index * 100}>
-                      <Card className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30">
-                        <div className="relative aspect-video overflow-hidden">
+                      <Card 
+                        className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30 cursor-pointer"
+                        onClick={() => setSelectedProject(project)}
+                      >
+                        <div className="relative aspect-[4/3] overflow-hidden">
                           <Image
                             src={project.image}
                             alt={project.title}
                             data-ai-hint={project.aiHint}
-                            width={600}
-                            height={400}
+                            width={800}
+                            height={600}
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -128,6 +136,38 @@ export default function PortfolioSection() {
             </AnimatePresence>
           </Tabs>
         </div>
+
+        <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+          <DialogContent className="max-w-4xl w-full p-0 !gap-0">
+            {selectedProject && (
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="relative aspect-[4/3] md:aspect-auto">
+                   <Image
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      data-ai-hint={selectedProject.aiHint}
+                      fill
+                      className="object-cover"
+                    />
+                </div>
+                <div className="p-8 flex flex-col">
+                  <h2 className="font-headline text-3xl font-bold mb-2">{selectedProject.title}</h2>
+                  <Badge variant="secondary" className="mb-4 w-fit">{selectedProject.category}</Badge>
+                  <p className="text-muted-foreground flex-grow">{selectedProject.description}</p>
+                </div>
+              </div>
+            )}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-2 right-2 rounded-full h-8 w-8 bg-black/50 text-white hover:bg-black/75 hover:text-white z-10"
+            >
+              <X className="h-5 w-5" />
+              <span className="sr-only">Close</span>
+            </Button>
+          </DialogContent>
+        </Dialog>
       </section>
     </FadeInOnScroll>
   );
