@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -151,9 +151,13 @@ export default function PortfolioSection() {
                     />
                 </div>
                 <div className="p-8 flex flex-col">
-                  <h2 className="font-headline text-3xl font-bold mb-2">{selectedProject.title}</h2>
-                  <Badge variant="secondary" className="mb-4 w-fit">{selectedProject.category}</Badge>
-                  <p className="text-muted-foreground flex-grow">{selectedProject.description}</p>
+                  <DialogHeader>
+                    <DialogTitle className="font-headline text-3xl font-bold mb-2">{selectedProject.title}</DialogTitle>
+                    <DialogDescription className="text-muted-foreground flex-grow">
+                      <Badge variant="secondary" className="mb-4 w-fit">{selectedProject.category}</Badge>
+                      <p>{selectedProject.description}</p>
+                    </DialogDescription>
+                  </DialogHeader>
                 </div>
               </div>
             )}
