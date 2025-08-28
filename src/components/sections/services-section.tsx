@@ -1,25 +1,33 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 
 const services = [
   {
-    title: "Home Theater Systems",
-    description: "We design and install custom home theater systems. Enjoy amazing picture and sound, tailored to your space for the perfect movie night.",
-    image: "https://picsum.photos/600/401",
-    aiHint: "home cinema",
+    title: "Home Theater Installation",
+    description: "Transform your living space into an immersive cinematic paradise. We specialize in designing and installing custom home theater systems that deliver breathtaking visuals and heart-pounding audio, perfectly calibrated for your room.",
+    image: "https://picsum.photos/800/600?random=1",
+    aiHint: "home cinema room",
+    features: [
+      "Custom 4K/8K Projector & Screen Setup",
+      "Dolby Atmos & DTS:X Surround Sound",
+      "Smart Home Integration & Control",
+      "Acoustic Room Analysis & Treatment",
+      "Comfortable, Stylish Cinema Seating",
+    ],
   },
   {
     title: "Commercial AV Solutions",
-    description: "We set up audio and video systems for businesses like offices, restaurants, and hotels. Get clear sound and video for your customers and staff.",
-    image: "https://picsum.photos/600/402",
-    aiHint: "office audio",
-  },
-  {
-    title: "Acoustic Treatments",
-    description: "We improve the sound in any room. By analyzing the space and adding custom treatments, we can reduce echo and make everything sound clearer.",
-    image: "https://picsum.photos/600/403",
-    aiHint: "acoustic panels",
+    description: "Elevate your business environment with our professional audio-visual solutions. From crystal-clear conference room audio to dynamic digital signage and multi-zone sound systems for restaurants and retail, we deliver reliability and performance.",
+    image: "https://picsum.photos/800/600?random=2",
+    aiHint: "modern boardroom",
+    features: [
+      "Video Conferencing & Presentation Systems",
+      "Multi-Zone Audio for Retail & Hospitality",
+      "Digital Signage & Video Walls",
+      "PA Systems for Public & Corporate Spaces",
+      "Ongoing System Maintenance & Support",
+    ],
   },
 ];
 
@@ -34,26 +42,32 @@ export default function ServicesSection() {
               We offer a range of specialized services to meet your audio-visual needs with precision and excellence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="space-y-20">
             {services.map((service, index) => (
               <FadeInOnScroll key={service.title} delay={index * 150}>
-                <Card className="h-full flex flex-col bg-card shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 border-border">
-                  <div className="relative aspect-video w-full rounded-t-lg overflow-hidden">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        data-ai-hint={service.aiHint}
-                        fill
-                        className="object-cover"
-                      />
+                <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''}`}>
+                  <div className={`relative aspect-video w-full rounded-lg overflow-hidden shadow-lg ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      data-ai-hint={service.aiHint}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <CardHeader>
-                    <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                </Card>
+                  <div className="space-y-4">
+                    <h3 className="font-headline text-3xl font-bold">{service.title}</h3>
+                    <p className="text-muted-foreground text-lg">{service.description}</p>
+                    <ul className="space-y-3 pt-2">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                          <span className="text-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </FadeInOnScroll>
             ))}
           </div>
