@@ -4,20 +4,20 @@ import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 
 const services = [
   {
-    title: "Home Theaters",
-    description: "We create custom home theaters with great sound and clear 4K picture, made to fit your room.",
+    title: "Home Theater Systems",
+    description: "We design and install custom home theater systems. Enjoy amazing picture and sound, tailored to your space for the perfect movie night.",
     image: "https://picsum.photos/600/401",
     aiHint: "home cinema",
   },
   {
-    title: "Sound for Business",
-    description: "We provide clear audio and video for offices, stores, and hotels to improve how you communicate.",
+    title: "Commercial AV Solutions",
+    description: "We set up audio and video systems for businesses like offices, restaurants, and hotels. Get clear sound and video for your customers and staff.",
     image: "https://picsum.photos/600/402",
     aiHint: "office audio",
   },
   {
-    title: "Soundproofing",
-    description: "We fix room sound by analyzing it and adding custom treatments to remove echoes for clear audio.",
+    title: "Acoustic Treatments",
+    description: "We improve the sound in any room. By analyzing the space and adding custom treatments, we can reduce echo and make everything sound clearer.",
     image: "https://picsum.photos/600/403",
     aiHint: "acoustic panels",
   },
