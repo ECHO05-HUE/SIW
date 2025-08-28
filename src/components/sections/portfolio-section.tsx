@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -47,6 +47,16 @@ const projects = [
 ];
 
 type Category = "All" | "Home Theaters" | "Commercial Sound" | "Acoustics";
+
+// Dummy components for framer-motion since it's not in the project
+const AnimatePresence: React.FC<{children: React.ReactNode}> = ({ children }) => <>{children}</>;
+const motion = {
+  div: React.forwardRef<HTMLDivElement, {children: React.ReactNode; className: string; initial?: any; animate?: any; exit?: any; transition?: any;}>(({children, className}, ref) => (
+    <div ref={ref} className={className}>{children}</div>
+  )),
+};
+motion.div.displayName = 'motion.div';
+
 
 export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<Category>("All");
@@ -112,12 +122,3 @@ export default function PortfolioSection() {
     </FadeInOnScroll>
   );
 }
-
-// Dummy components for framer-motion since it's not in the project
-const AnimatePresence: React.FC<{children: React.ReactNode}> = ({ children }) => <>{children}</>;
-const motion = {
-  div: React.forwardRef<HTMLDivElement, {children: React.ReactNode; className: string}>(({children, className}, ref) => (
-    <div ref={ref} className={className}>{children}</div>
-  )),
-};
-motion.div.displayName = 'motion.div';
