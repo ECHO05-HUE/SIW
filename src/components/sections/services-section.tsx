@@ -1,27 +1,23 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Monitor, Building2, Waves } from 'lucide-react';
 import Image from "next/image";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 
 const services = [
   {
-    icon: <Monitor className="h-8 w-8 text-primary" />,
-    title: "Home Theater Systems",
-    description: "Bespoke home theaters with immersive surround sound and crystal-clear 4K projection, tailored to your space.",
+    title: "Home Theaters",
+    description: "We create custom home theaters with great sound and clear 4K picture, made to fit your room.",
     image: "https://picsum.photos/600/401",
     aiHint: "home cinema",
   },
   {
-    icon: <Building2 className="h-8 w-8 text-primary" />,
-    title: "Commercial AV Solutions",
-    description: "Reliable audio & video for boardrooms, retail, and hospitality. Enhance communication and customer experience.",
+    title: "Sound for Business",
+    description: "We provide clear audio and video for offices, stores, and hotels to improve how you communicate.",
     image: "https://picsum.photos/600/402",
     aiHint: "office audio",
   },
   {
-    icon: <Waves className="h-8 w-8 text-primary" />,
-    title: "Acoustic Treatments",
-    description: "Optimize your room's sound with our analysis and custom treatments, eliminating echo for perfect audio clarity.",
+    title: "Soundproofing",
+    description: "We fix room sound by analyzing it and adding custom treatments to remove echoes for clear audio.",
     image: "https://picsum.photos/600/403",
     aiHint: "acoustic panels",
   },
@@ -51,10 +47,7 @@ export default function ServicesSection() {
                         className="object-cover"
                       />
                   </div>
-                  <CardHeader className="flex-row items-center gap-4">
-                    <div className="bg-secondary p-3 rounded-lg">
-                      {service.icon}
-                    </div>
+                  <CardHeader>
                     <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
