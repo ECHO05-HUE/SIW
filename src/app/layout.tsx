@@ -15,7 +15,7 @@ const lexend = Lexend({
 
 
 export const metadata: Metadata = {
-  title: 'Acoustica Vista',
+  title: 'Prime Audio Solution',
   description: 'Premium Audio-Visual Solutions',
 };
 

@@ -33,7 +33,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Email Address</p>
-                    <a href="mailto:contact@acousticavista.com" className="text-muted-foreground hover:text-primary transition-colors">contact@acousticavista.com</a>
+                    <a href="mailto:contact@primeaudiosolution.com" className="text-muted-foreground hover:text-primary transition-colors">contact@primeaudiosolution.com</a>
                   </div>
                 </div>
                  <div className="flex items-start gap-4">
@@ -56,7 +56,7 @@ export default function ContactSection() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Acoustica Vista Location in Jaipur"
+                title="Prime Audio Solution Location in Jaipur"
               ></iframe>
             </div>
           </div>

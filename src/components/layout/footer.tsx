@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 gap-4">
         <div className="flex items-center gap-3 mb-4 md:mb-0">
           <AcousticaLogo className="h-7 w-7 text-primary" />
-          <span className="font-headline text-xl font-semibold">Acoustica Vista</span>
+          <span className="font-headline text-xl font-semibold">Prime Audio Solution</span>
         </div>
         <p className="text-sm text-muted-foreground text-center md:text-right">
-          &copy; {new Date().getFullYear()} Acoustica Vista. All rights reserved. <br />
+          &copy; {new Date().getFullYear()} Prime Audio Solution. All rights reserved. <br />
           Crafting immersive audio-visual experiences.
         </p>
       </div>
