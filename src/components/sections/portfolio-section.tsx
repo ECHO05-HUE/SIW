@@ -113,7 +113,7 @@ export default function PortfolioSection() {
                       >
                         <div className="relative aspect-[4/3] overflow-hidden">
                           <Image
-                            src={`https://picsum.photos/800/600?random=${index}`}
+                            src={project.image}
                             alt={project.title}
                             data-ai-hint={project.aiHint}
                             width={800}
@@ -138,34 +138,26 @@ export default function PortfolioSection() {
         </div>
 
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-          <DialogContent className="max-w-4xl w-full p-0 !gap-0">
+          <DialogContent className="max-w-4xl w-full p-0 !gap-0 bg-transparent border-0">
             {selectedProject && (
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative aspect-[4/3] md:aspect-auto">
-                   <Image
-                      src={selectedProject.image}
-                      alt={selectedProject.title}
-                      data-ai-hint={selectedProject.aiHint}
-                      fill
-                      className="object-cover"
-                    />
-                </div>
-                <div className="p-8 flex flex-col">
-                  <DialogHeader>
-                    <DialogTitle className="font-headline text-3xl font-bold mb-2">{selectedProject.title}</DialogTitle>
-                     <Badge variant="secondary" className="mb-4 w-fit">{selectedProject.category}</Badge>
-                    <DialogDescription className="text-muted-foreground flex-grow">
-                      {selectedProject.description}
-                    </DialogDescription>
-                  </DialogHeader>
-                </div>
+              <div className="relative aspect-video">
+                 <Image
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    data-ai-hint={selectedProject.aiHint}
+                    fill
+                    className="object-contain"
+                  />
+                  {/* The DialogTitle is required for accessibility but we can hide it visually */}
+                  <DialogTitle className="sr-only">{selectedProject.title}</DialogTitle>
+                  <DialogDescription className="sr-only">{selectedProject.description}</DialogDescription>
               </div>
             )}
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setSelectedProject(null)}
-              className="absolute top-2 right-2 rounded-full h-8 w-8 bg-black/50 text-white hover:bg-black/75 hover:text-white z-10"
+              className="absolute -top-2 -right-2 rounded-full h-8 w-8 bg-black/50 text-white hover:bg-black/75 hover:text-white z-10"
             >
               <X className="h-5 w-5" />
               <span className="sr-only">Close</span>
