@@ -113,7 +113,7 @@ export default function PortfolioSection() {
                       >
                         <div className="relative aspect-[4/3] overflow-hidden">
                           <Image
-                            src={project.image}
+                            src={`https://picsum.photos/800/600?random=${index}`}
                             alt={project.title}
                             data-ai-hint={project.aiHint}
                             width={800}
@@ -153,9 +153,9 @@ export default function PortfolioSection() {
                 <div className="p-8 flex flex-col">
                   <DialogHeader>
                     <DialogTitle className="font-headline text-3xl font-bold mb-2">{selectedProject.title}</DialogTitle>
+                     <Badge variant="secondary" className="mb-4 w-fit">{selectedProject.category}</Badge>
                     <DialogDescription className="text-muted-foreground flex-grow">
-                      <Badge variant="secondary" className="mb-4 w-fit">{selectedProject.category}</Badge>
-                      <p>{selectedProject.description}</p>
+                      {selectedProject.description}
                     </DialogDescription>
                   </DialogHeader>
                 </div>
