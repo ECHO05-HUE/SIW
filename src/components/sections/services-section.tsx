@@ -29,6 +29,19 @@ const services = [
       "Ongoing System Maintenance & Support",
     ],
   },
+  {
+    title: "Acoustic Treatment",
+    description: "Unlock the true potential of your space with our expert acoustic treatment services. We analyze your room's acoustics and apply tailored solutions to eliminate echo, reverb, and unwanted noise for pristine sound quality.",
+    image: "https://picsum.photos/800/600?random=3",
+    aiHint: "acoustic panels",
+    features: [
+      "Professional Room Acoustic Analysis",
+      "Custom-Fabricated Absorption Panels",
+      "Bass Traps and Diffuser Installation",
+      "Soundproofing for Walls, Floors & Ceilings",
+      "Solutions for Recording Studios & Hi-Fi Rooms",
+    ],
+  },
 ];
 
 export default function ServicesSection() {
