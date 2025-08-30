@@ -4,7 +4,7 @@ import { AcousticaLogo } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import React, from 'react';
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
@@ -76,6 +76,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="pt-20">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Mobile Navigation</SheetTitle>
+                <SheetDescription>Main navigation links for the website.</SheetDescription>
+              </SheetHeader>
               <nav className="flex flex-col items-center gap-6">
                 <NavLinks inSheet />
                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" onClick={handleLinkClick}>
