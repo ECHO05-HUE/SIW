@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   keywords: ['home theater ajmer', 'commercial av solutions', 'acoustic treatment', 'dolby atmos installation', '4k projector setup', 'soundproofing india', 'prime audio solution'],
   authors: [{ name: 'Prime Audio Solution' }],
   creator: 'Prime Audio Solution',
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Prime Audio Solution | Home Theater & Commercial AV in Ajmer',
     description: 'Expert design and installation of custom home theaters, commercial sound systems, and acoustic treatments.',
