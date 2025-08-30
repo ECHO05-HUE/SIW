@@ -2,7 +2,7 @@
 
 import { AcousticaLogo } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import React, { useState, useEffect } from 'react';
+import React, from 'react';
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -15,21 +15,33 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [hasScrolled, setHasScrolled] = React.useState(false);
+  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
 
-  useEffect(() => {
+
+  React.useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  const handleLinkClick = () => {
+    setIsSheetOpen(false);
+  };
 
   const NavLinks = ({ inSheet = false }: { inSheet?: boolean }) => (
     <>
       {navLinks.map((link) => (
-        <Button key={link.href} variant="link" asChild className={cn(inSheet ? "text-lg" : "text-base", "text-foreground hover:text-primary")}>
-          <a href={link.href} >
+        <Button 
+          key={link.href} 
+          variant="link" 
+          asChild 
+          className={cn(inSheet ? "text-lg" : "text-base", "text-foreground hover:text-primary")}
+          onClick={inSheet ? handleLinkClick : undefined}
+        >
+          <a href={link.href}>
             {link.label}
           </a>
         </Button>
@@ -56,7 +68,7 @@ export default function Header() {
           </Button>
         </nav>
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
@@ -66,7 +78,7 @@ export default function Header() {
             <SheetContent side="right" className="pt-20">
               <nav className="flex flex-col items-center gap-6">
                 <NavLinks inSheet />
-                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" onClick={handleLinkClick}>
                     <a href="#contact">Get a Quote</a>
                  </Button>
               </nav>
