@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Prime Audio Solution | Home Theater & Commercial AV in Ajmer',
     description: 'Expert design and installation of custom home theaters, commercial sound systems, and acoustic treatments.',
-    url: 'https://primeaudiosolution.com', // Replace with your actual domain
+    url: 'https://primeaudiosolution.in', // Replace with your actual domain
     siteName: 'Prime Audio Solution',
     images: [
       {
