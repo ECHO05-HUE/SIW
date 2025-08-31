@@ -5,7 +5,7 @@ import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 const services = [
   {
     title: "Home Theater Installation",
-    description: "Transform your living space into an immersive cinematic paradise. We specialize in designing and installing custom home theater systems that deliver breathtaking visuals and heart-pounding audio, perfectly calibrated for your room.",
+    description: "Transform your living space into a cinematic paradise with our expert home theater installation in Ajmer. We design and install custom systems, including full Dolby Atmos installation, to deliver breathtaking visuals and heart-pounding audio.",
     image: "/service-home-theater.jpg",
     aiHint: "home cinema room",
     features: [

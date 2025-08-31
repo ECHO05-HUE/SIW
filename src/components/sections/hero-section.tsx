@@ -21,10 +21,10 @@ export default function HeroSection() {
 
       <div className="container relative z-10 p-4 mt-auto mb-20 md:mb-32 text-center">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
-          Immersive Audio-Visual
+          Home Theater Installation in Ajmer
         </h1>
         <p className="mt-6 text-xl md:text-2xl max-w-4xl mx-auto text-muted-foreground">
-          We deliver unparalleled quality and precision, from breathtaking home cinemas to crystal-clear commercial sound systems.
+          We deliver unparalleled quality with professional cinema and Dolby Atmos installation in Ajmer, from breathtaking home theaters to crystal-clear commercial sound.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Button asChild size="lg" className="text-lg py-7 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full sm:w-auto">
