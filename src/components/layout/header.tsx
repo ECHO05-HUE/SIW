@@ -2,7 +2,7 @@
 
 import { AcousticaLogo } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import React, from 'react';
+import React, { useState } from 'react';
 import Link from "next/link";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -15,8 +15,8 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [hasScrolled, setHasScrolled] = React.useState(false);
-  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
 
   React.useEffect(() => {
@@ -59,7 +59,7 @@ export default function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3">
           <AcousticaLogo className="h-10 w-10 text-primary" />
-          <span className="font-headline text-2xl font-bold">Prime Audio Solution</span>
+          <span className="font-headline text-2xl font-bold">Acoustica Vista</span>
         </Link>
         <nav className="hidden md:flex items-center gap-2">
           <NavLinks />

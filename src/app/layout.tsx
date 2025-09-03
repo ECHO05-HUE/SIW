@@ -1,37 +1,54 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import { Inter, Lexend } from "next/font/google";
+import { Poppins, PT_Sans } from "next/font/google";
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-body',
-});
-
-const lexend = Lexend({
+const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-headline',
+  weight: ['400', '600', '700', '800'],
+});
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['400', '700'],
 });
 
 
 export const metadata: Metadata = {
-  title: 'Home Theater & Dolby Atmos Installation in Ajmer | Prime Audio Solution',
-  description: 'Expert home theater and cinema installation in Ajmer. We specialize in custom Dolby Atmos installation and complete audio-visual solutions for your home. Contact us for a quote.',
-  keywords: ['home theater installation in ajmer', 'cinema installation in ajmer', 'dolby atmos installation in ajmer', 'home theater ajmer', 'commercial av solutions', 'acoustic treatment', 'prime audio solution'],
-  authors: [{ name: 'Prime Audio Solution' }],
-  creator: 'Prime Audio Solution',
+  title: 'Home Theater & Sound System Installation in Ajmer | Acoustica Vista',
+  description: 'Expert home theater, cinema, Dolby Atmos, and commercial sound system installation in Ajmer. We offer custom audio system setup, surround sound, and acoustic treatment for homes, halls, and businesses.',
+  keywords: [
+    'home theater installation in Ajmer',
+    'sound system installation in Ajmer',
+    'audio system setup in Ajmer',
+    'Dolby digital installation in Ajmer',
+    'Dolby Atmos installation in Ajmer',
+    'surround sound setup in Ajmer',
+    'home cinema installation in Ajmer',
+    'living room home theater setup Ajmer',
+    'commercial AV solutions',
+    'hall sound system setup in Ajmer',
+    'conference room sound system Ajmer',
+    'restaurant sound system installation Ajmer',
+    'professional sound installation in Ajmer',
+    'Acoustica Vista',
+  ],
+  authors: [{ name: 'Acoustica Vista' }],
+  creator: 'Acoustica Vista',
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Home Theater & Dolby Atmos Installation in Ajmer | Prime Audio Solution',
-    description: 'Professional cinema and Dolby Atmos installation services in Ajmer. Transform your space with our expert home theater solutions.',
+    title: 'Professional Home Theater & Sound System Installation in Ajmer | Acoustica Vista',
+    description: 'From custom home cinema design to commercial sound systems for restaurants and halls, Acoustica Vista is your trusted installer in Ajmer.',
     url: 'https://primeaudiosolution.in',
-    siteName: 'Prime Audio Solution',
+    siteName: 'Acoustica Vista',
     images: [
       {
         url: '/hero-image-main.jpg',
         width: 1200,
         height: 630,
-        alt: 'High-end home theater system by Prime Audio Solution',
+        alt: 'High-end home theater system by Acoustica Vista in Ajmer',
       },
     ],
     locale: 'en_IN',
@@ -39,8 +56,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Expert Home Theater Installation in Ajmer | Prime Audio Solution',
-    description: 'Looking for home theater, cinema, or Dolby Atmos installation in Ajmer? Prime Audio Solution delivers unmatched quality and service.',
+    title: 'Expert Audio & Video Installation in Ajmer | Acoustica Vista',
+    description: 'Looking for home theater, Dolby Atmos, or commercial sound system installation in Ajmer? Acoustica Vista delivers unmatched quality and service.',
     images: ['/hero-image-main.jpg'], 
   },
   robots: {
@@ -59,7 +76,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Prime Audio Solution',
+  name: 'Acoustica Vista',
   image: 'https://primeaudiosolution.in/hero-image-main.jpg',
   '@id': 'https://primeaudiosolution.in',
   url: 'https://primeaudiosolution.in',
@@ -67,18 +84,17 @@ const jsonLd = {
   email: 'akshay.primeaudiosolution@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'House No. 6, Shyam Nagar, Madarpura',
-    addressLocality: 'Ajmer',
-    postalCode: '305001',
+    streetAddress: 'Jaipur, Rajasthan',
+    addressLocality: 'Jaipur',
     addressRegion: 'Rajasthan',
     addressCountry: 'IN',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 26.4678191,
-    longitude: 74.55734894335937,
+    latitude: 26.9124, 
+    longitude: 75.7873,
   },
-  description: 'Specialists in home theater, cinema, and Dolby Atmos installation in Ajmer. We also offer commercial AV solutions and professional acoustic treatment.',
+  description: 'Specialists in home theater, cinema, Dolby Atmos, and commercial sound system installation in Ajmer. We also offer professional acoustic treatment for residential and commercial spaces.',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -87,7 +103,6 @@ const jsonLd = {
       closes: '20:00',
     },
   ],
-  servesCuisine: '',
   priceRange: '$$',
 };
 
@@ -104,8 +119,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.variable} ${lexend.variable} font-body bg-background text-foreground antialiased`}>
+      <body className={`${ptSans.variable} ${poppins.variable} font-body bg-background text-foreground antialiased`}>
         {children}
         <Toaster />
       </body>

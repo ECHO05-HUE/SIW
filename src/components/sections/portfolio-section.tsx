@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Luxury Villa Cinema",
     category: "Home Theaters",
-    image: "/portfolio-1.jpg",
+    image: "https://picsum.photos/800/600",
     alt: "A luxury private home cinema installation in Ajmer with plush seating.",
     aiHint: "luxury cinema",
     description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Corporate Boardroom AV",
     category: "Commercial Sound",
-    image: "/portfolio-2.jpg",
+    image: "https://picsum.photos/800/601",
     alt: "Corporate boardroom in Ajmer with a seamless commercial audio-visual setup.",
     aiHint: "corporate boardroom",
     description: "Integrated video conferencing and presentation system for a Fortune 500 company."
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Studio Acoustic Paneling",
     category: "Acoustics",
-    image: "/portfolio-3.jpg",
+    image: "https://picsum.photos/800/602",
     alt: "Acoustic panels providing sound treatment in a professional recording studio.",
     aiHint: "recording studio",
     description: "Custom-designed acoustic panels for a professional music recording studio."
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Minimalist Media Room",
     category: "Home Theaters",
-    image: "/portfolio-4.jpg",
+    image: "https://picsum.photos/800/603",
     alt: "A minimalist media room with in-wall speakers and a hidden projector screen.",
     aiHint: "media room",
     description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Restaurant Multi-Zone Audio",
     category: "Commercial Sound",
-    image: "/portfolio-5.jpg",
+    image: "https://picsum.photos/800/604",
     alt: "An upscale restaurant with a multi-zone commercial sound system.",
     aiHint: "restaurant audio",
     description: "A seamless multi-zone audio system for an upscale dining establishment."
@@ -54,7 +54,7 @@ const projects = [
   {
     title: "Home Recording Booth",
     category: "Acoustics",
-    image: "/portfolio-6.jpg",
+    image: "https://picsum.photos/800/605",
     alt: "A compact home studio with acoustic treatment for professional recording.",
     aiHint: "home studio",
     description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
@@ -79,9 +79,9 @@ export default function PortfolioSection() {
       <section id="portfolio" className="w-full py-24 md:py-32 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tight">Our Portfolio</h2>
+            <h2 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tight">Our Work</h2>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-lg">
-              We take pride in our craftsmanship. Explore a selection of our recently completed projects.
+              We take pride in our craftsmanship. Explore a selection of our recently completed sound system and home theater installations in Ajmer.
             </p>
           </div>
 
@@ -126,6 +126,10 @@ export default function PortfolioSection() {
 
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
           <DialogContent className="max-w-4xl w-full p-0 !gap-0 bg-background/90 backdrop-blur-sm border-0">
+             <DialogHeader className="sr-only">
+                <DialogTitle>{selectedProject?.title}</DialogTitle>
+                <DialogDescription>{selectedProject?.description}</DialogDescription>
+            </DialogHeader>
             {selectedProject && (
               <div className="relative max-h-[90vh] w-full">
                  <Image
@@ -134,17 +138,15 @@ export default function PortfolioSection() {
                     data-ai-hint={selectedProject.aiHint}
                     width={1200}
                     height={800}
-                    className="object-contain w-full h-full"
+                    className="object-contain w-full h-full max-h-[calc(90vh-4rem)]"
                   />
-                  <DialogTitle className="sr-only">{selectedProject.title}</DialogTitle>
-                  <DialogDescription className="sr-only">{selectedProject.description}</DialogDescription>
               </div>
             )}
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setSelectedProject(null)}
-              className="absolute -top-2 -right-2 rounded-full h-8 w-8 bg-black/50 text-white hover:bg-black/75 hover:text-white z-10"
+              className="absolute top-2 right-2 rounded-full h-8 w-8 bg-black/50 text-white hover:bg-black/75 hover:text-white z-10"
               aria-label="Close image preview"
             >
               <X className="h-5 w-5" />

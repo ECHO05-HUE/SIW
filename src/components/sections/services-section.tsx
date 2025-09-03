@@ -5,44 +5,44 @@ import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 const services = [
   {
     title: "Home Theater Installation",
-    description: "Transform your living space into a cinematic paradise with our expert home theater installation in Ajmer. We design and install custom systems, including full Dolby Atmos installation, to deliver breathtaking visuals and heart-pounding audio.",
-    image: "/service-home-theater.jpg",
+    description: "Transform your living space into a cinematic paradise with our expert home theater installation in Ajmer. We design and install custom systems, offering full Dolby Atmos and Dolby Digital surround sound setup to deliver breathtaking visuals and heart-pounding audio for any room size.",
+    image: "https://picsum.photos/800/600",
     alt: "A professional home theater system with a large projector screen and ambient lighting in Ajmer.",
     aiHint: "home cinema room",
     features: [
       "Custom 4K/8K Projector & Screen Setup",
-      "Dolby Atmos & DTS:X Surround Sound",
-      "Smart Home Integration & Control",
-      "Acoustic Room Analysis & Treatment",
-      "Comfortable, Stylish Cinema Seating",
+      "Dolby Atmos & DTS:X Surround Sound Installation",
+      "Affordable & Low-Cost Home Theater Setups",
+      "Soundproofing & Acoustic Room Analysis",
+      "Living Room & Small Room Theater Solutions",
     ],
   },
   {
-    title: "Commercial AV Solutions",
-    description: "Elevate your business environment with our professional audio-visual solutions. From crystal-clear conference room audio to dynamic digital signage and multi-zone sound systems for restaurants and retail, we deliver reliability and performance.",
-    image: "/service-commercial-av.jpg",
+    title: "Commercial & Event Audio Solutions",
+    description: "Elevate your business or event with our professional audio-visual solutions in Ajmer. From crystal-clear conference room systems to dynamic sound for marriage halls, restaurants, and auditoriums, we deliver reliability, performance, and expert PA system installation.",
+    image: "https://picsum.photos/800/601",
     alt: "A modern boardroom with integrated commercial AV solutions for presentations.",
     aiHint: "modern boardroom",
     features: [
-      "Video Conferencing & Presentation Systems",
-      "Multi-Zone Audio for Retail & Hospitality",
-      "Digital Signage & Video Walls",
-      "PA Systems for Public & Corporate Spaces",
+      "Conference & Boardroom AV Systems",
+      "Restaurant & Hall Sound System Setup",
+      "Auditorium & Stage Sound Installation",
+      "DJ and PA System Installation",
       "Ongoing System Maintenance & Support",
     ],
   },
   {
-    title: "Acoustic Treatment",
-    description: "Unlock the true potential of your space with our expert acoustic treatment services. We analyze your room's acoustics and apply tailored solutions to eliminate echo, reverb, and unwanted noise for pristine sound quality.",
-    image: "/service-acoustic-treatment.jpg",
+    title: "Acoustic Treatment & Soundproofing",
+    description: "Unlock the true potential of your space with our expert acoustic treatment services in Ajmer. We analyze your room's acoustics and apply tailored soundproofing and paneling solutions to eliminate echo, reverb, and unwanted noise for pristine sound quality.",
+    image: "https://picsum.photos/800/602",
     alt: "A recording studio wall covered with professional acoustic treatment panels.",
     aiHint: "acoustic panels",
     features: [
       "Professional Room Acoustic Analysis",
       "Custom-Fabricated Absorption Panels",
       "Bass Traps and Diffuser Installation",
-      "Soundproofing for Walls, Floors & Ceilings",
-      "Solutions for Recording Studios & Hi-Fi Rooms",
+      "Complete Soundproofing for Walls, Floors & Ceilings",
+      "Solutions for Studios, Hi-Fi Rooms & Commercial Spaces",
     ],
   },
 ];
@@ -55,14 +55,14 @@ export default function ServicesSection() {
           <div className="text-center mb-16">
             <h2 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tight">What We Do</h2>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-lg">
-              We offer a range of specialized services to meet your audio-visual needs with precision and excellence.
+              We offer a range of specialized services for home and commercial audio-visual needs in Ajmer, focusing on precision, quality, and excellence.
             </p>
           </div>
           <div className="space-y-20">
             {services.map((service, index) => (
               <FadeInOnScroll key={service.title} delay={index * 150}>
                 <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''}`}>
-                  <div className={`relative aspect-video w-full rounded-lg overflow-hidden shadow-lg ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
+                  <div className={`relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-lg ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
                     <Image
                       src={service.image}
                       alt={service.alt}
