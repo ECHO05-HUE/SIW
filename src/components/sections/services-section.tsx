@@ -7,6 +7,7 @@ const services = [
     title: "Home Theater Installation",
     description: "Transform your living space into a cinematic paradise with our expert home theater installation in Ajmer. We design and install custom systems, including full Dolby Atmos installation, to deliver breathtaking visuals and heart-pounding audio.",
     image: "/service-home-theater.jpg",
+    alt: "A professional home theater system with a large projector screen and ambient lighting in Ajmer.",
     aiHint: "home cinema room",
     features: [
       "Custom 4K/8K Projector & Screen Setup",
@@ -20,6 +21,7 @@ const services = [
     title: "Commercial AV Solutions",
     description: "Elevate your business environment with our professional audio-visual solutions. From crystal-clear conference room audio to dynamic digital signage and multi-zone sound systems for restaurants and retail, we deliver reliability and performance.",
     image: "/service-commercial-av.jpg",
+    alt: "A modern boardroom with integrated commercial AV solutions for presentations.",
     aiHint: "modern boardroom",
     features: [
       "Video Conferencing & Presentation Systems",
@@ -33,6 +35,7 @@ const services = [
     title: "Acoustic Treatment",
     description: "Unlock the true potential of your space with our expert acoustic treatment services. We analyze your room's acoustics and apply tailored solutions to eliminate echo, reverb, and unwanted noise for pristine sound quality.",
     image: "/service-acoustic-treatment.jpg",
+    alt: "A recording studio wall covered with professional acoustic treatment panels.",
     aiHint: "acoustic panels",
     features: [
       "Professional Room Acoustic Analysis",
@@ -62,7 +65,7 @@ export default function ServicesSection() {
                   <div className={`relative aspect-video w-full rounded-lg overflow-hidden shadow-lg ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
                     <Image
                       src={service.image}
-                      alt={`Service offered: ${service.title}`}
+                      alt={service.alt}
                       data-ai-hint={service.aiHint}
                       fill
                       className="object-cover"

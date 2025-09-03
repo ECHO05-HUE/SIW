@@ -56,6 +56,42 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Prime Audio Solution',
+  image: 'https://primeaudiosolution.in/hero-image-main.jpg',
+  '@id': 'https://primeaudiosolution.in',
+  url: 'https://primeaudiosolution.in',
+  telephone: '+91 93510 68346',
+  email: 'akshay.primeaudiosolution@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'House No. 6, Shyam Nagar, Madarpura',
+    addressLocality: 'Ajmer',
+    postalCode: '305001',
+    addressRegion: 'Rajasthan',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 26.4678191,
+    longitude: 74.55734894335937,
+  },
+  description: 'Specialists in home theater, cinema, and Dolby Atmos installation in Ajmer. We also offer commercial AV solutions and professional acoustic treatment.',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '09:00',
+      closes: '20:00',
+    },
+  ],
+  servesCuisine: '',
+  priceRange: '$$',
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +99,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} ${lexend.variable} font-body bg-background text-foreground antialiased`}>
         {children}
         <Toaster />

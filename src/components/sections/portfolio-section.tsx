@@ -15,6 +15,7 @@ const projects = [
     title: "Luxury Villa Cinema",
     category: "Home Theaters",
     image: "/portfolio-1.jpg",
+    alt: "A luxury private home cinema installation in Ajmer with plush seating.",
     aiHint: "luxury cinema",
     description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
   },
@@ -22,6 +23,7 @@ const projects = [
     title: "Corporate Boardroom AV",
     category: "Commercial Sound",
     image: "/portfolio-2.jpg",
+    alt: "Corporate boardroom in Ajmer with a seamless commercial audio-visual setup.",
     aiHint: "corporate boardroom",
     description: "Integrated video conferencing and presentation system for a Fortune 500 company."
   },
@@ -29,6 +31,7 @@ const projects = [
     title: "Studio Acoustic Paneling",
     category: "Acoustics",
     image: "/portfolio-3.jpg",
+    alt: "Acoustic panels providing sound treatment in a professional recording studio.",
     aiHint: "recording studio",
     description: "Custom-designed acoustic panels for a professional music recording studio."
   },
@@ -36,6 +39,7 @@ const projects = [
     title: "Minimalist Media Room",
     category: "Home Theaters",
     image: "/portfolio-4.jpg",
+    alt: "A minimalist media room with in-wall speakers and a hidden projector screen.",
     aiHint: "media room",
     description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
   },
@@ -43,6 +47,7 @@ const projects = [
     title: "Restaurant Multi-Zone Audio",
     category: "Commercial Sound",
     image: "/portfolio-5.jpg",
+    alt: "An upscale restaurant with a multi-zone commercial sound system.",
     aiHint: "restaurant audio",
     description: "A seamless multi-zone audio system for an upscale dining establishment."
   },
@@ -50,6 +55,7 @@ const projects = [
     title: "Home Recording Booth",
     category: "Acoustics",
     image: "/portfolio-6.jpg",
+    alt: "A compact home studio with acoustic treatment for professional recording.",
     aiHint: "home studio",
     description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
   },
@@ -96,7 +102,7 @@ export default function PortfolioSection() {
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
                         src={project.image}
-                        alt={`Portfolio project: ${project.title}`}
+                        alt={project.alt}
                         data-ai-hint={project.aiHint}
                         width={800}
                         height={600}
@@ -119,17 +125,17 @@ export default function PortfolioSection() {
         </div>
 
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-          <DialogContent className="max-w-4xl w-full p-0 !gap-0 bg-transparent border-0">
+          <DialogContent className="max-w-4xl w-full p-0 !gap-0 bg-background/90 backdrop-blur-sm border-0">
             {selectedProject && (
-              <div className="relative aspect-video">
+              <div className="relative max-h-[90vh] w-full">
                  <Image
                     src={selectedProject.image}
-                    alt={`Full screen view of portfolio project: ${selectedProject.title}`}
+                    alt={selectedProject.alt}
                     data-ai-hint={selectedProject.aiHint}
-                    fill
-                    className="object-contain"
+                    width={1200}
+                    height={800}
+                    className="object-contain w-full h-full"
                   />
-                  {/* The DialogTitle is required for accessibility but we can hide it visually */}
                   <DialogTitle className="sr-only">{selectedProject.title}</DialogTitle>
                   <DialogDescription className="sr-only">{selectedProject.description}</DialogDescription>
               </div>
