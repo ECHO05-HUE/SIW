@@ -3,25 +3,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Film, Building, Waves, ArrowRight } from "lucide-react";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const services = [
   {
     icon: <Film className="h-10 w-10 text-primary" />,
     title: "Home Theater Installation",
     description: "Custom cinema rooms with 4K projectors, Dolby Atmos, and smart home integration.",
-    link: "#",
+    link: "/services/home-theater-installation",
   },
   {
-    icon: <Building className="h-10 w-10 text-primary" />,
+    icon: <Building className="h-10 w_10 text-primary" />,
     title: "Commercial AV Solutions",
     description: "Professional sound systems for offices, restaurants, halls, and live events.",
-    link: "#",
+    link: "/services/commercial-av-solutions",
   },
   {
     icon: <Waves className="h-10 w-10 text-primary" />,
     title: "Acoustic Treatment Services",
     description: "Soundproofing and acoustic paneling for recording studios, offices, and homes.",
-    link: "#",
+    link: "/services/acoustic-treatment",
   },
 ];
 
@@ -50,9 +51,9 @@ export default function QuickServices() {
                     <p className="text-muted-foreground">{service.description}</p>
                   </CardContent>
                   <Button variant="link" asChild className="mt-6 text-lg">
-                    <a href={service.link}>
+                    <Link href={service.link}>
                       Learn More <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
+                    </Link>
                   </Button>
                 </Card>
               </FadeInOnScroll>
