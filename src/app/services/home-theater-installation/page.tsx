@@ -17,12 +17,12 @@ const service = {
     alt: "A professional home theater system with a large projector screen and ambient lighting in Ajmer.",
     aiHint: "home cinema room",
     offerings: [
-      "4K & 8K projectors with big screen setup for home cinema installation in Ajmer",
-      "Dolby Atmos installation in Ajmer & Dolby digital installation in Ajmer (5.1, 7.1, 9.1)",
-      "Smart home integration with mobile app & voice control",
-      "Hidden wiring and elegant living room home theater setup in Ajmer",
-      "Cinema-style recliner seating & lighting solutions",
-      "Room acoustic analysis and home soundproofing and theater installation in Ajmer",
+      "Custom design for home cinema installation in Ajmer, featuring 4K & 8K projectors and large screens.",
+      "Expert installation of immersive surround sound systems, including Dolby Digital (5.1, 7.1) and Dolby Atmos (5.1.2, 7.1.4, 9.1.2) for a true cinematic experience.",
+      "Installation of high-fidelity tower speakers, bookshelf speakers, in-wall/in-ceiling speakers, and powerful subwoofers.",
+      "Smart home integration for seamless control of your audio-visual system via mobile apps and voice commands.",
+      "Professional, hidden wiring for an elegant and clean living room home theater setup in Ajmer.",
+      "Complete room solutions, including cinema-style recliner seating, ambient lighting, and full acoustic analysis with soundproofing.",
     ],
     forWhom: [
         "Families looking for affordable home theater setup in Ajmer",
