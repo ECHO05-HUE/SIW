@@ -11,7 +11,7 @@ import ContactSection from '@/components/sections/contact-section';
 import { Card } from '@/components/ui/card';
 
 const service = {
-    title: "🏢 Commercial AV Solutions – Sound System Installation in Ajmer",
+    title: "Commercial AV Solutions – Sound System Installation in Ajmer",
     description: "We provide professional sound system installation in Ajmer for offices, schools, restaurants, auditoriums, and events. Our team ensures reliable, high-quality audio system setup in Ajmer that meets every commercial need.",
     image: "https://picsum.photos/800/601",
     alt: "A modern boardroom with integrated commercial AV solutions for presentations.",

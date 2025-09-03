@@ -11,7 +11,7 @@ import ContactSection from '@/components/sections/contact-section';
 import { Card } from '@/components/ui/card';
 
 const service = {
-    title: "🎬 Home Theater Installation in Ajmer",
+    title: "Home Theater Installation in Ajmer",
     description: "Experience the ultimate entertainment with our home theater installation in Ajmer. We specialize in custom home theater design and installation in Ajmer, ensuring your movies, music, and gaming come alive with cinema-quality sound and visuals.",
     image: "https://picsum.photos/800/600",
     alt: "A professional home theater system with a large projector screen and ambient lighting in Ajmer.",

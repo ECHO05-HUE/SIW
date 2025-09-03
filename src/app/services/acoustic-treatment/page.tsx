@@ -11,7 +11,7 @@ import ContactSection from '@/components/sections/contact-section';
 import { Card } from '@/components/ui/card';
 
 const service = {
-    title: "🎶 Acoustic Treatment Services – Ajmer Sound System Repair and Installation",
+    title: "Acoustic Treatment Services – Ajmer Sound System Repair and Installation",
     description: "Even the best home theater installation in Ajmer or sound system installation in Ajmer won’t perform properly without the right acoustic environment. That’s why we provide professional sound installation in Ajmer with advanced acoustic treatment.",
     image: "https://picsum.photos/800/602",
     alt: "A recording studio wall covered with professional acoustic treatment panels.",
