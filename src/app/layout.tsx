@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -80,7 +81,7 @@ const jsonLd = {
   image: 'https://primeaudiosolution.in/hero-image-main.jpg',
   '@id': 'https://primeaudiosolution.in',
   url: 'https://primeaudiosolution.in',
-  telephone: '+91 93510 68346',
+  telephone: '+91 98288 02930',
   email: 'akshay.primeaudiosolution@gmail.com',
   address: {
     '@type': 'PostalAddress',

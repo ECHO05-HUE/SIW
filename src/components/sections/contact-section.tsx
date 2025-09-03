@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
@@ -42,11 +43,11 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Phone Number</p>
-                    <a href="tel:+919351068346" className="text-muted-foreground hover:text-primary transition-colors">+91 93510 68346</a>
+                    <a href="tel:+919828802930" className="text-muted-foreground hover:text-primary transition-colors">+91 98288 02930</a>
                   </div>
                 </div>
                 <Button asChild size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white">
-                  <a href="https://wa.me/919351068346" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919828802930" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-6 w-6" />
                     Chat on WhatsApp
                   </a>
