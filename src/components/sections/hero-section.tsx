@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -20,7 +21,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container relative z-10 p-4 mt-auto mb-20 md:mb-32 text-center">
-        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
+        <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
           Home Theater & Sound System Installation in Ajmer
         </h1>
         <p className="mt-6 text-xl md:text-2xl max-w-4xl mx-auto text-muted-foreground">
