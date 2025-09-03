@@ -9,9 +9,25 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ContactSection from '@/components/sections/contact-section';
 import { Card } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Acoustic Treatment & Soundproofing in Ajmer | Acoustica Vista",
+  description: "Professional acoustic treatment and soundproofing in Ajmer. We design and install sound absorption panels, bass traps, and diffusers for home studios, offices, and home theaters.",
+  keywords: [
+    'Acoustic treatment Ajmer',
+    'soundproofing Ajmer',
+    'home soundproofing and theater installation in Ajmer',
+    'low cost home theater setup in Ajmer',
+    'sound absorption panels Ajmer',
+    'Ajmer sound system repair and installation',
+    'recording studio acoustics',
+  ],
+};
+
 
 const service = {
-    title: "Acoustic Treatment Services – Ajmer Sound System Repair and Installation",
+    title: "Acoustic Treatment Services",
     description: "Even the best home theater installation in Ajmer or sound system installation in Ajmer won’t perform properly without the right acoustic environment. That’s why we provide professional sound installation in Ajmer with advanced acoustic treatment.",
     image: "/service-acoustic-treatment.jpg",
     alt: "A recording studio wall covered with professional acoustic treatment panels.",

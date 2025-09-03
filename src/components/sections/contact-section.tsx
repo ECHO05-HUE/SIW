@@ -25,7 +25,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg">Our Location</p>
-                    <p className="text-muted-foreground">Jaipur, Rajasthan, India</p>
+                    <p className="text-muted-foreground">House No. 6, Shyam Nagar, Madarpura, Ajmer – 305001, Rajasthan, India</p>
                   </div>
                 </div>
                  <div className="flex items-start gap-4">
@@ -56,14 +56,14 @@ export default function ContactSection() {
             </div>
             <div className="w-full rounded-lg overflow-hidden border-2 border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825681144!2d75.650472249129!3d26.8854479192663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1716912345678"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57224.22773539828!2d74.5925328404285!3d26.452274191638654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be6d8fcb53589%3A0x1e64903336962803!2sAjmer%2C%20Rajasthan!5e0!3m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '300px' }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Acoustica Vista Location in Jaipur"
+                title="Acoustica Vista Location in Ajmer"
               ></iframe>
             </div>
           </div>

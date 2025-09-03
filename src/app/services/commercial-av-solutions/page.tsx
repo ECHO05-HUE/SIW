@@ -9,9 +9,26 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ContactSection from '@/components/sections/contact-section';
 import { Card } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Commercial Sound System & AV Installation in Ajmer",
+  description: "Expert sound system installation in Ajmer for halls, restaurants, conference rooms, and events. Professional PA systems, auditorium AV, and multi-zone audio.",
+  keywords: [
+    'commercial AV solutions Ajmer',
+    'sound system installation in Ajmer',
+    'hall sound system setup in Ajmer',
+    'restaurant sound system installation Ajmer',
+    'conference room sound system Ajmer',
+    'auditorium sound system installation Ajmer',
+    'PA system installation in Ajmer',
+    'marriage hall sound system Ajmer',
+  ],
+};
+
 
 const service = {
-    title: "Commercial AV Solutions – Sound System Installation in Ajmer",
+    title: "Commercial AV Solutions",
     description: "We provide professional sound system installation in Ajmer for offices, schools, restaurants, auditoriums, and events. Our team ensures reliable, high-quality audio system setup in Ajmer that meets every commercial need.",
     image: "/service-commercial-av.jpg",
     alt: "A modern boardroom with integrated commercial AV solutions for presentations.",

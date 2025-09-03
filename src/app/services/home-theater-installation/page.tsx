@@ -9,9 +9,27 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ContactSection from '@/components/sections/contact-section';
 import { Card } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Home Theater & Cinema Installation in Ajmer | Dolby Atmos",
+  description: "Expert home theater installation in Ajmer. We offer custom home cinema design, Dolby Atmos & Dolby Digital surround sound setup, and affordable home theater solutions.",
+  keywords: [
+    'home theater installation in Ajmer',
+    'Dolby Atmos installation in Ajmer',
+    'Dolby digital installation in Ajmer',
+    'surround sound setup in Ajmer',
+    'home cinema installation in Ajmer',
+    'living room home theater setup Ajmer',
+    'small room home theater installation in Ajmer',
+    'affordable home theater setup in Ajmer',
+    'Ajmer home theater service',
+  ],
+};
+
 
 const service = {
-    title: "Home Theater Installation in Ajmer",
+    title: "Home Theater Installation",
     description: "Experience the ultimate entertainment with our home theater installation in Ajmer. We specialize in custom home theater design and installation in Ajmer, ensuring your movies, music, and gaming come alive with cinema-quality sound and visuals.",
     image: "/service-home-theater.jpg",
     alt: "A professional home theater system with a large projector screen and ambient lighting in Ajmer.",

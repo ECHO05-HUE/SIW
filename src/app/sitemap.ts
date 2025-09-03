@@ -2,6 +2,18 @@ import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://primeaudiosolution.in';
+  const servicePages = [
+    '/services/home-theater-installation',
+    '/services/commercial-av-solutions',
+    '/services/acoustic-treatment',
+  ];
+
+  const serviceUrls = servicePages.map(page => ({
+    url: `${baseUrl}${page}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
 
   return [
     {
@@ -10,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 1,
     },
+    ...serviceUrls,
     {
       url: `${baseUrl}/#services`,
       lastModified: new Date(),

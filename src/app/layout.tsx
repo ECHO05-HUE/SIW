@@ -85,15 +85,16 @@ const jsonLd = {
   email: 'akshay.primeaudiosolution@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Jaipur, Rajasthan',
-    addressLocality: 'Jaipur',
+    streetAddress: 'House No. 6, Shyam Nagar, Madarpura',
+    addressLocality: 'Ajmer',
+    postalCode: '305001',
     addressRegion: 'Rajasthan',
     addressCountry: 'IN',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 26.9124, 
-    longitude: 75.7873,
+    latitude: 26.4499, 
+    longitude: 74.6399,
   },
   description: 'Specialists in home theater, cinema, Dolby Atmos, and commercial sound system installation in Ajmer. We also offer professional acoustic treatment for residential and commercial spaces.',
   openingHoursSpecification: [
