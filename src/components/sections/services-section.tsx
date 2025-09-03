@@ -115,28 +115,30 @@ export default function ServicesSection() {
                     <h3 className="font-headline text-3xl font-bold">{service.title}</h3>
                     <p className="text-muted-foreground text-lg">{service.description}</p>
                     
-                    <div>
-                        <h4 className="font-headline text-xl font-semibold mb-3">✅ What We Offer</h4>
-                        <ul className="space-y-3">
-                        {service.offerings.map((feature) => (
-                            <li key={feature} className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                            <span className="text-foreground">{feature}</span>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h4 className="font-headline text-xl font-semibold mb-3">✅ Who It’s For</h4>
-                        <ul className="space-y-3">
-                        {service.forWhom.map((feature) => (
-                            <li key={feature} className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                            <span className="text-foreground">{feature}</span>
-                            </li>
-                        ))}
-                        </ul>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 className="font-headline text-xl font-semibold mb-3">What We Offer</h4>
+                            <ul className="space-y-3">
+                            {service.offerings.map((feature) => (
+                                <li key={feature} className="flex items-start gap-3">
+                                <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                                <span className="text-foreground">{feature}</span>
+                                </li>
+                            ))}
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 className="font-headline text-xl font-semibold mb-3">Who It’s For</h4>
+                            <ul className="space-y-3">
+                            {service.forWhom.map((feature) => (
+                                <li key={feature} className="flex items-start gap-3">
+                                <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                                <span className="text-foreground">{feature}</span>
+                                </li>
+                            ))}
+                            </ul>
+                        </div>
                     </div>
 
                   </div>
@@ -147,31 +149,19 @@ export default function ServicesSection() {
 
           <FadeInOnScroll>
             <div className="mt-24 md:mt-32">
-                <Card className="bg-background/50 border-2 border-primary/20 shadow-xl">
-                    <CardHeader className="items-center">
-                        <CardTitle className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight text-center">
-                           ⚡ Why Choose Prime Audio Solution?
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
-                           {whyChooseUs.slice(0, 3).map((item, index) => (
-                                 <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50">
-                                    <Zap className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                                    <span>{item}</span>
-                                 </div>
-                           ))}
-                        </div>
-                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg mt-6">
-                           {whyChooseUs.slice(3).map((item, index) => (
-                                 <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50">
-                                    <Zap className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                                    <span>{item}</span>
-                                 </div>
-                           ))}
-                        </div>
-                    </CardContent>
-                </Card>
+                <div className="text-center mb-12">
+                     <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
+                       ⚡ Why Choose Prime Audio Solution?
+                    </h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
+                   {whyChooseUs.map((item, index) => (
+                         <div key={index} className="flex items-start gap-4 p-6 rounded-lg bg-card border border-border/50 shadow-sm">
+                            <Zap className="h-7 w-7 text-accent mt-1 flex-shrink-0" />
+                            <span>{item}</span>
+                         </div>
+                   ))}
+                </div>
             </div>
           </FadeInOnScroll>
 
