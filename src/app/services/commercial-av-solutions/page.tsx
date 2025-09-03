@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from "next/image";
@@ -6,6 +7,8 @@ import { FadeInOnScroll } from "@/components/animations/fade-in-on-scroll";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import ContactSection from '@/components/sections/contact-section';
+import { Card } from '@/components/ui/card';
 
 const service = {
     title: "🏢 Commercial AV Solutions – Sound System Installation in Ajmer",
@@ -42,6 +45,25 @@ const whyChooseUs = [
     "End-to-end solutions: design, setup, repair, and maintenance",
     "Trusted for hall sound system setup in Ajmer, marriage hall sound system Ajmer, and more",
     "Recognized as the best sound system installer in Ajmer",
+];
+
+const relevantProjects = [
+    {
+        title: "Corporate Boardroom AV",
+        category: "Commercial Sound",
+        image: "https://picsum.photos/800/601",
+        alt: "Corporate boardroom in Ajmer with a seamless commercial audio-visual setup.",
+        aiHint: "corporate boardroom",
+        description: "Integrated video conferencing and presentation system for a Fortune 500 company."
+    },
+    {
+        title: "Restaurant Multi-Zone Audio",
+        category: "Commercial Sound",
+        image: "https://picsum.photos/800/604",
+        alt: "An upscale restaurant with a multi-zone commercial sound system.",
+        aiHint: "restaurant audio",
+        description: "A seamless multi-zone audio system for an upscale dining establishment."
+    }
 ];
 
 export default function CommercialAVPage() {
@@ -124,9 +146,39 @@ export default function CommercialAVPage() {
             </div>
           </FadeInOnScroll>
 
+            <FadeInOnScroll>
+                <div className="mt-24 md:mt-32">
+                     <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
+                            Related Projects
+                        </h2>
+                     </div>
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        {relevantProjects.map((project, index) => (
+                             <Card key={index} className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30">
+                                <div className="relative aspect-[4/3] w-full">
+                                    <Image
+                                        src={project.image}
+                                        alt={project.alt}
+                                        data-ai-hint={project.aiHint}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                </div>
+                                <div className="p-6 flex-grow flex flex-col">
+                                    <h3 className="font-headline text-xl font-bold mb-2">{project.title}</h3>
+                                    <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
+                                </div>
+                             </Card>
+                        ))}
+                     </div>
+                </div>
+            </FadeInOnScroll>
+
         </div>
       </section>
     </FadeInOnScroll>
+        <ContactSection />
       </main>
       <Footer />
     </div>

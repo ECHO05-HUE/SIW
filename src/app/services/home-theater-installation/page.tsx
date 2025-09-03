@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from "next/image";
@@ -6,6 +7,8 @@ import { FadeInOnScroll } from "@/components/animations/fade-in-on-scroll";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import ContactSection from '@/components/sections/contact-section';
+import { Card } from '@/components/ui/card';
 
 const service = {
     title: "🎬 Home Theater Installation in Ajmer",
@@ -36,6 +39,25 @@ const whyChooseUs = [
     "End-to-end solutions: design, setup, repair, and maintenance",
     "Trusted for hall sound system setup in Ajmer, marriage hall sound system Ajmer, and more",
     "Recognized as the best sound system installer in Ajmer",
+];
+
+const relevantProjects = [
+    {
+        title: "Luxury Villa Cinema",
+        category: "Home Theaters",
+        image: "https://picsum.photos/800/600",
+        alt: "A luxury private home cinema installation in Ajmer with plush seating.",
+        aiHint: "luxury cinema",
+        description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
+    },
+    {
+        title: "Minimalist Media Room",
+        category: "Home Theaters",
+        image: "https://picsum.photos/800/603",
+        alt: "A minimalist media room with in-wall speakers and a hidden projector screen.",
+        aiHint: "media room",
+        description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
+    }
 ];
 
 
@@ -118,10 +140,40 @@ export default function HomeTheaterInstallationPage() {
                 </div>
             </div>
           </FadeInOnScroll>
+          
+          <FadeInOnScroll>
+                <div className="mt-24 md:mt-32">
+                     <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
+                            Related Projects
+                        </h2>
+                     </div>
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        {relevantProjects.map((project, index) => (
+                             <Card key={index} className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30">
+                                <div className="relative aspect-[4/3] w-full">
+                                    <Image
+                                        src={project.image}
+                                        alt={project.alt}
+                                        data-ai-hint={project.aiHint}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                </div>
+                                <div className="p-6 flex-grow flex flex-col">
+                                    <h3 className="font-headline text-xl font-bold mb-2">{project.title}</h3>
+                                    <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
+                                </div>
+                             </Card>
+                        ))}
+                     </div>
+                </div>
+            </FadeInOnScroll>
 
         </div>
       </section>
     </FadeInOnScroll>
+      <ContactSection />
       </main>
       <Footer />
     </div>

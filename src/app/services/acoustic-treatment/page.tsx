@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from "next/image";
@@ -6,6 +7,8 @@ import { FadeInOnScroll } from "@/components/animations/fade-in-on-scroll";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import ContactSection from '@/components/sections/contact-section';
+import { Card } from '@/components/ui/card';
 
 const service = {
     title: "🎶 Acoustic Treatment Services – Ajmer Sound System Repair and Installation",
@@ -37,6 +40,26 @@ const whyChooseUs = [
     "Trusted for hall sound system setup in Ajmer, marriage hall sound system Ajmer, and more",
     "Recognized as the best sound system installer in Ajmer",
 ];
+
+const relevantProjects = [
+    {
+    title: "Studio Acoustic Paneling",
+    category: "Acoustics",
+    image: "https://picsum.photos/800/602",
+    alt: "Acoustic panels providing sound treatment in a professional recording studio.",
+    aiHint: "recording studio",
+    description: "Custom-designed acoustic panels for a professional music recording studio."
+  },
+  {
+    title: "Home Recording Booth",
+    category: "Acoustics",
+    image: "https://picsum.photos/800/605",
+    alt: "A compact home studio with acoustic treatment for professional recording.",
+    aiHint: "home studio",
+    description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
+  },
+];
+
 
 export default function AcousticTreatmentPage() {
   return (
@@ -118,9 +141,38 @@ export default function AcousticTreatmentPage() {
             </div>
           </FadeInOnScroll>
 
+            <FadeInOnScroll>
+                <div className="mt-24 md:mt-32">
+                     <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
+                            Related Projects
+                        </h2>
+                     </div>
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        {relevantProjects.map((project, index) => (
+                             <Card key={index} className="overflow-hidden group h-full flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 bg-background/30">
+                                <div className="relative aspect-[4/3] w-full">
+                                    <Image
+                                        src={project.image}
+                                        alt={project.alt}
+                                        data-ai-hint={project.aiHint}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                </div>
+                                <div className="p-6 flex-grow flex flex-col">
+                                    <h3 className="font-headline text-xl font-bold mb-2">{project.title}</h3>
+                                    <p className="text-muted-foreground text-sm flex-grow">{project.description}</p>
+                                </div>
+                             </Card>
+                        ))}
+                     </div>
+                </div>
+            </FadeInOnScroll>
         </div>
       </section>
     </FadeInOnScroll>
+        <ContactSection />
       </main>
       <Footer />
     </div>
