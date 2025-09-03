@@ -13,7 +13,7 @@ import { Card } from '@/components/ui/card';
 const service = {
     title: "Home Theater Installation in Ajmer",
     description: "Experience the ultimate entertainment with our home theater installation in Ajmer. We specialize in custom home theater design and installation in Ajmer, ensuring your movies, music, and gaming come alive with cinema-quality sound and visuals.",
-    image: "https://picsum.photos/800/600",
+    image: "/service-home-theater.jpg",
     alt: "A professional home theater system with a large projector screen and ambient lighting in Ajmer.",
     aiHint: "home cinema room",
     offerings: [
@@ -45,7 +45,7 @@ const relevantProjects = [
     {
         title: "Luxury Villa Cinema",
         category: "Home Theaters",
-        image: "https://picsum.photos/800/600",
+        image: "/portfolio-1.jpg",
         alt: "A luxury private home cinema installation in Ajmer with plush seating.",
         aiHint: "luxury cinema",
         description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
@@ -53,7 +53,7 @@ const relevantProjects = [
     {
         title: "Minimalist Media Room",
         category: "Home Theaters",
-        image: "https://picsum.photos/800/603",
+        image: "/portfolio-4.jpg",
         alt: "A minimalist media room with in-wall speakers and a hidden projector screen.",
         aiHint: "media room",
         description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
@@ -156,7 +156,8 @@ export default function HomeTheaterInstallationPage() {
                                         src={project.image}
                                         alt={project.alt}
                                         data-ai-hint={project.aiHint}
-                                        fill
+                                        width={800}
+                                        height={600}
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>

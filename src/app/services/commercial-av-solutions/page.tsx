@@ -13,7 +13,7 @@ import { Card } from '@/components/ui/card';
 const service = {
     title: "Commercial AV Solutions – Sound System Installation in Ajmer",
     description: "We provide professional sound system installation in Ajmer for offices, schools, restaurants, auditoriums, and events. Our team ensures reliable, high-quality audio system setup in Ajmer that meets every commercial need.",
-    image: "https://picsum.photos/800/601",
+    image: "/service-commercial-av.jpg",
     alt: "A modern boardroom with integrated commercial AV solutions for presentations.",
     aiHint: "modern boardroom",
     offerings: [
@@ -51,7 +51,7 @@ const relevantProjects = [
     {
         title: "Corporate Boardroom AV",
         category: "Commercial Sound",
-        image: "https://picsum.photos/800/601",
+        image: "/portfolio-2.jpg",
         alt: "Corporate boardroom in Ajmer with a seamless commercial audio-visual setup.",
         aiHint: "corporate boardroom",
         description: "Integrated video conferencing and presentation system for a Fortune 500 company."
@@ -59,7 +59,7 @@ const relevantProjects = [
     {
         title: "Restaurant Multi-Zone Audio",
         category: "Commercial Sound",
-        image: "https://picsum.photos/800/604",
+        image: "/portfolio-5.jpg",
         alt: "An upscale restaurant with a multi-zone commercial sound system.",
         aiHint: "restaurant audio",
         description: "A seamless multi-zone audio system for an upscale dining establishment."
@@ -161,7 +161,8 @@ export default function CommercialAVPage() {
                                         src={project.image}
                                         alt={project.alt}
                                         data-ai-hint={project.aiHint}
-                                        fill
+                                        width={800}
+                                        height={600}
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>

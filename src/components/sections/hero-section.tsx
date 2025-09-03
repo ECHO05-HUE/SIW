@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section className="relative h-screen min-h-[700px] flex items-center text-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://picsum.photos/1920/1080"
+          src="/hero-image-main.jpg"
           alt="Professional home cinema and sound system installation in Ajmer by Acoustica Vista"
           data-ai-hint="home theater"
           fill

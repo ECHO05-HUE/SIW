@@ -13,7 +13,7 @@ import { Card } from '@/components/ui/card';
 const service = {
     title: "Acoustic Treatment Services – Ajmer Sound System Repair and Installation",
     description: "Even the best home theater installation in Ajmer or sound system installation in Ajmer won’t perform properly without the right acoustic environment. That’s why we provide professional sound installation in Ajmer with advanced acoustic treatment.",
-    image: "https://picsum.photos/800/602",
+    image: "/service-acoustic-treatment.jpg",
     alt: "A recording studio wall covered with professional acoustic treatment panels.",
     aiHint: "acoustic panels",
     offerings: [
@@ -45,7 +45,7 @@ const relevantProjects = [
     {
     title: "Studio Acoustic Paneling",
     category: "Acoustics",
-    image: "https://picsum.photos/800/602",
+    image: "/portfolio-3.jpg",
     alt: "Acoustic panels providing sound treatment in a professional recording studio.",
     aiHint: "recording studio",
     description: "Custom-designed acoustic panels for a professional music recording studio."
@@ -53,7 +53,7 @@ const relevantProjects = [
   {
     title: "Home Recording Booth",
     category: "Acoustics",
-    image: "https://picsum.photos/800/605",
+    image: "/portfolio-6.jpg",
     alt: "A compact home studio with acoustic treatment for professional recording.",
     aiHint: "home studio",
     description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
@@ -156,7 +156,8 @@ export default function AcousticTreatmentPage() {
                                         src={project.image}
                                         alt={project.alt}
                                         data-ai-hint={project.aiHint}
-                                        fill
+                                        width={800}
+                                        height={600}
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>

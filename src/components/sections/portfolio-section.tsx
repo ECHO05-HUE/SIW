@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Luxury Villa Cinema",
     category: "Home Theaters",
-    image: "https://picsum.photos/800/600",
+    image: "/portfolio-1.jpg",
     alt: "A luxury private home cinema installation in Ajmer with plush seating.",
     aiHint: "luxury cinema",
     description: "A state-of-the-art private cinema with Dolby Atmos sound and a 4K laser projector."
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Corporate Boardroom AV",
     category: "Commercial Sound",
-    image: "https://picsum.photos/800/601",
+    image: "/portfolio-2.jpg",
     alt: "Corporate boardroom in Ajmer with a seamless commercial audio-visual setup.",
     aiHint: "corporate boardroom",
     description: "Integrated video conferencing and presentation system for a Fortune 500 company."
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Studio Acoustic Paneling",
     category: "Acoustics",
-    image: "https://picsum.photos/800/602",
+    image: "/portfolio-3.jpg",
     alt: "Acoustic panels providing sound treatment in a professional recording studio.",
     aiHint: "recording studio",
     description: "Custom-designed acoustic panels for a professional music recording studio."
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Minimalist Media Room",
     category: "Home Theaters",
-    image: "https://picsum.photos/800/603",
+    image: "/portfolio-4.jpg",
     alt: "A minimalist media room with in-wall speakers and a hidden projector screen.",
     aiHint: "media room",
     description: "A clean and modern media room with in-wall speakers and a hidden projector screen."
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Restaurant Multi-Zone Audio",
     category: "Commercial Sound",
-    image: "https://picsum.photos/800/604",
+    image: "/portfolio-5.jpg",
     alt: "An upscale restaurant with a multi-zone commercial sound system.",
     aiHint: "restaurant audio",
     description: "A seamless multi-zone audio system for an upscale dining establishment."
@@ -54,7 +54,7 @@ const projects = [
   {
     title: "Home Recording Booth",
     category: "Acoustics",
-    image: "https://picsum.photos/800/605",
+    image: "/portfolio-6.jpg",
     alt: "A compact home studio with acoustic treatment for professional recording.",
     aiHint: "home studio",
     description: "A compact, soundproofed recording booth for a voice-over artist's home studio."
