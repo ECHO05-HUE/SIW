@@ -12,7 +12,7 @@ import { Card } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Acoustic Treatment & Soundproofing in Ajmer | Acoustica Vista",
+  title: "Acoustic Treatment & Soundproofing in Ajmer | Prime Audio Solution",
   description: "Professional acoustic treatment and soundproofing in Ajmer. We design and install sound absorption panels, bass traps, and diffusers for home studios, offices, and home theaters.",
   keywords: [
     'Acoustic treatment Ajmer',
@@ -141,7 +141,7 @@ export default function AcousticTreatmentPage() {
             <div className="mt-24 md:mt-32">
                 <div className="text-center mb-12">
                      <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
-                       ⚡ Why Choose Acoustica Vista?
+                       ⚡ Why Choose Prime Audio Solution?
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">

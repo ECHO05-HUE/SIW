@@ -18,7 +18,7 @@ const ptSans = PT_Sans({
 
 
 export const metadata: Metadata = {
-  title: 'Home Theater & Sound System Installation in Ajmer | Acoustica Vista',
+  title: 'Home Theater & Sound System Installation in Ajmer | Prime Audio Solution',
   description: 'Expert home theater, cinema, Dolby Atmos, and commercial sound system installation in Ajmer. We offer custom audio system setup, surround sound, and acoustic treatment for homes, halls, and businesses.',
   keywords: [
     'home theater installation in Ajmer',
@@ -34,22 +34,22 @@ export const metadata: Metadata = {
     'conference room sound system Ajmer',
     'restaurant sound system installation Ajmer',
     'professional sound installation in Ajmer',
-    'Acoustica Vista',
+    'Prime Audio Solution',
   ],
-  authors: [{ name: 'Acoustica Vista' }],
-  creator: 'Acoustica Vista',
+  authors: [{ name: 'Prime Audio Solution' }],
+  creator: 'Prime Audio Solution',
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Professional Home Theater & Sound System Installation in Ajmer | Acoustica Vista',
-    description: 'From custom home cinema design to commercial sound systems for restaurants and halls, Acoustica Vista is your trusted installer in Ajmer.',
+    title: 'Professional Home Theater & Sound System Installation in Ajmer | Prime Audio Solution',
+    description: 'From custom home cinema design to commercial sound systems for restaurants and halls, Prime Audio Solution is your trusted installer in Ajmer.',
     url: 'https://primeaudiosolution.in',
-    siteName: 'Acoustica Vista',
+    siteName: 'Prime Audio Solution',
     images: [
       {
         url: '/hero-image-main.jpg',
         width: 1200,
         height: 630,
-        alt: 'High-end home theater system by Acoustica Vista in Ajmer',
+        alt: 'High-end home theater system by Prime Audio Solution in Ajmer',
       },
     ],
     locale: 'en_IN',
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Expert Audio & Video Installation in Ajmer | Acoustica Vista',
-    description: 'Looking for home theater, Dolby Atmos, or commercial sound system installation in Ajmer? Acoustica Vista delivers unmatched quality and service.',
+    title: 'Expert Audio & Video Installation in Ajmer | Prime Audio Solution',
+    description: 'Looking for home theater, Dolby Atmos, or commercial sound system installation in Ajmer? Prime Audio Solution delivers unmatched quality and service.',
     images: ['/hero-image-main.jpg'], 
   },
   robots: {
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Acoustica Vista',
+  name: 'Prime Audio Solution',
   image: 'https://primeaudiosolution.in/hero-image-main.jpg',
   '@id': 'https://primeaudiosolution.in',
   url: 'https://primeaudiosolution.in',

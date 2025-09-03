@@ -147,7 +147,7 @@ export default function CommercialAVPage() {
             <div className="mt-24 md:mt-32">
                 <div className="text-center mb-12">
                      <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
-                       ⚡ Why Choose Acoustica Vista?
+                       ⚡ Why Choose Prime Audio Solution?
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
