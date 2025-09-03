@@ -1,3 +1,4 @@
+
 "use client";
 
 import { AcousticaLogo } from "@/components/icons";
@@ -9,9 +10,9 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -64,7 +65,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-2">
           <NavLinks />
            <Button asChild className="ml-4 bg-primary hover:bg-primary/90 text-primary-foreground">
-             <a href="#contact">Get a Quote</a>
+             <a href="/#contact">Get a Quote</a>
           </Button>
         </nav>
         <div className="md:hidden">
@@ -83,7 +84,7 @@ export default function Header() {
               <nav className="flex flex-col items-center gap-6">
                 <NavLinks inSheet />
                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" onClick={handleLinkClick}>
-                    <a href="#contact">Get a Quote</a>
+                    <a href="/#contact">Get a Quote</a>
                  </Button>
               </nav>
             </SheetContent>
