@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, Zap } from "lucide-react";
+import { CheckCircle2, Zap, Film, Building, Waves } from "lucide-react";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
