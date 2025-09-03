@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { CheckCircle2, Zap } from "lucide-react";
 import { FadeInOnScroll } from "../animations/fade-in-on-scroll";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 
 const services = [
   {
@@ -101,7 +102,7 @@ export default function ServicesSection() {
           <div className="space-y-20">
             {services.map((service, index) => (
               <FadeInOnScroll key={service.title} delay={index * 150}>
-                <div className={`grid md:grid-cols-2 gap-12 items-start ${index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''}`}>
+                <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''}`}>
                   <div className={`relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-lg ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
                     <Image
                       src={service.image}
@@ -111,14 +112,15 @@ export default function ServicesSection() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <h3 className="font-headline text-3xl font-bold">{service.title}</h3>
                     <p className="text-muted-foreground text-lg">{service.description}</p>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <h4 className="font-headline text-xl font-semibold mb-3">What We Offer</h4>
-                            <ul className="space-y-3">
+                    <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="offerings">
+                        <AccordionTrigger className="font-headline text-xl font-semibold">What We Offer</AccordionTrigger>
+                        <AccordionContent>
+                           <ul className="space-y-3 pt-4">
                             {service.offerings.map((feature) => (
                                 <li key={feature} className="flex items-start gap-3">
                                 <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
@@ -126,11 +128,12 @@ export default function ServicesSection() {
                                 </li>
                             ))}
                             </ul>
-                        </div>
-                        
-                        <div>
-                            <h4 className="font-headline text-xl font-semibold mb-3">Who It’s For</h4>
-                            <ul className="space-y-3">
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="for-whom">
+                        <AccordionTrigger className="font-headline text-xl font-semibold">Who It’s For</AccordionTrigger>
+                        <AccordionContent>
+                           <ul className="space-y-3 pt-4">
                             {service.forWhom.map((feature) => (
                                 <li key={feature} className="flex items-start gap-3">
                                 <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
@@ -138,8 +141,9 @@ export default function ServicesSection() {
                                 </li>
                             ))}
                             </ul>
-                        </div>
-                    </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
 
                   </div>
                 </div>
@@ -151,13 +155,15 @@ export default function ServicesSection() {
             <div className="mt-24 md:mt-32">
                 <div className="text-center mb-12">
                      <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight">
-                       ⚡ Why Choose Prime Audio Solution?
+                       ⚡ Why Choose Acoustica Vista?
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
                    {whyChooseUs.map((item, index) => (
-                         <div key={index} className="flex items-start gap-4 p-6 rounded-lg bg-card border border-border/50 shadow-sm">
-                            <Zap className="h-7 w-7 text-accent mt-1 flex-shrink-0" />
+                         <div key={index} className="flex items-start gap-4 p-6 rounded-lg bg-card border border-border/50 shadow-sm transition-all hover:shadow-primary/20 hover:-translate-y-1">
+                            <div className="p-2 bg-primary/10 rounded-full">
+                               <Zap className="h-7 w-7 text-primary flex-shrink-0" />
+                            </div>
                             <span>{item}</span>
                          </div>
                    ))}
