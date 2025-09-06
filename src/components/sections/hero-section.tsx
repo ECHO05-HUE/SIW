@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-image-main.jpg"
-          alt="Professional home cinema and sound system installation in Ajmer by Acoustica Vista"
+          alt="Professional home cinema and sound system installation in Ajmer by Prime Audio Solution"
           data-ai-hint="home theater"
           fill
           className="object-cover"
@@ -25,17 +25,17 @@ export default function HeroSection() {
           Home Theater & Sound System Installation in Ajmer
         </h1>
         <p className="mt-6 text-xl md:text-2xl max-w-4xl mx-auto text-muted-foreground">
-          We deliver unparalleled quality with professional cinema, Dolby Atmos, and complete audio system setup in Ajmer, from breathtaking home theaters to crystal-clear commercial sound.
+          We deliver unparalleled quality with professional cinema, Dolby Atmos, Dolby Digital, and complete audio system setup in Ajmer, from breathtaking home theaters to crystal-clear commercial sound.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Button asChild size="lg" className="text-lg py-7 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full sm:w-auto">
-            <a href="#services">
+            <a href="/#services">
               Explore Services
               <MoveRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="text-lg py-7 px-8 border-2 font-semibold w-full sm:w-auto">
-             <a href="#contact">Request a Quote</a>
+             <a href="/#contact">Request a Quote</a>
           </Button>
         </div>
       </div>
